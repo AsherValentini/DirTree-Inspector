@@ -2,11 +2,8 @@
 #include <string>
 #include <memory>
 #include <vector>
+#include <map>
 
 struct DirNode {
-
-  std::string m_name;
-  std::vector<std::unique_ptr<DirNode>> m_children;
-
-  DirNode(std::string name) : m_name(name) {}
+  std::map<std::string, std::unique_ptr<DirNode>> m_children;
 };
